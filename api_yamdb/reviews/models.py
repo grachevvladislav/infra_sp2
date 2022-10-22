@@ -46,16 +46,14 @@ class User(AbstractUser):
 
     class Meta:
         ordering = ('username',)
+	verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
 
     def is_admin(self):
         return self.is_staff or self.role == ADMIN
 
     def is_moderator(self):
         return self.role == MODERATOR
-
-    class Meta:
-        verbose_name = 'Пользователь'
-        verbose_name_plural = 'Пользователи'
 
 
 class CategoryGenre(models.Model):
