@@ -26,48 +26,24 @@ Python 3.7
 Django 2.2  
 DjangoREST 3.12
 
-### Как запустить проект:
-
-Клонировать репозиторий и перейти в него в командной строке:
+### Клонировать репозиторий:
 
 ```
-git clone https://github.com/magicbuka/api_yamdb.git
+git clone https://github.com/grachevvladislav/infra_sp2.git
 ```
 
-Cоздать и активировать виртуальное окружение:
-
+### Запустить проект:
+Из папки ```infra``` выполнить команду 
 ```
-python -m venv venv
-```
-
-```
-source venv/Scripts/activate
+sudo docker-compose up --build
 ```
 
-Установить зависимости из файла requirements.txt:
+### Заполнить базу данных тестовыми данными из файлов "*.csv"
 
 ```
-pip install -r requirements.txt
+sudo docker-compose exec web python manage.py importdata
 ```
 
-Выполнить миграции:
-
-```
-python manage.py migrate
-```
-
-Запустить проект:
-
-```
-python manage.py runserver
-```
-
-Заполнить базу данных тестовыми данными из файлов формата ".csv"
-
-```
-python manage.py importdata
-```
-
-### Разработчики проекта:
-- [Baranova Anna](https://github.com/magicbuka)
+### Разработчик проекта:
 - [Grachev Vladislav](https://github.com/grachevvladislav)
+-
