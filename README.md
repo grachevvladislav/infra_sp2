@@ -32,6 +32,16 @@ DjangoREST 3.12
 git clone https://github.com/grachevvladislav/infra_sp2.git
 ```
 
+### Содержание файла ```.env```:
+
+```
+DB_NAME=postgres # имя базы данных
+POSTGRES_USER=postgres # логин для подключения к базе данных
+POSTGRES_PASSWORD=postgres # пароль для подключения к БД (установите свой)
+DB_HOST=db # название сервиса (контейнера)
+DB_PORT=5432 # порт для подключения к БД
+```
+
 ### Запустить проект:
 Из папки ```infra``` выполнить команду 
 ```
